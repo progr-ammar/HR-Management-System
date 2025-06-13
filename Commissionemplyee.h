@@ -1,34 +1,34 @@
-#ifndef HOURLYEMPLOYEE_H
-#define HOURLYEMPLOYEE_H
+#ifndef COMMISSIONEMPLOYEE_H
+#define COMMISSIONEMPLOYEE_H
 #include <iostream>
 #include <string>
 using namespace std;
 
-class HourlyEmployee : public Employee
+class CommissionEmployee : public Employee
 {
 private:
-    double hoursWorked;
+    double target;
     double rate;
 public:
-    HourlyEmployee()
+    CommissionEmployee()
     {
-        hoursWorked = 0;
+        target = 0;
         rate = 0;
-        e_type = 'h';
+        e_type = 'c';
     }
 
     void read()
     {
         Employee::read();
-        cout << "Enter Hours Worked: ";
-        cin >> hoursWorked;
+        cout << "Enter Target: ";
+        cin >> target;
         cout << "Enter Rate: ";
         cin >> rate;
     }
 
-    void setHoursWorked(double hoursWorked)
+    void setTarget(double target)
     {
-        this->hoursWorked = hoursWorked;
+        this->target = target;
     }
 
     void setRate(double rate)
@@ -36,9 +36,9 @@ public:
         this->rate = rate;
     }
 
-    double getHoursWorked()
+    double getTarget()
     {
-        return hoursWorked;
+        return target;
     }
 
     double getRate()
@@ -46,23 +46,23 @@ public:
         return rate;
     }
 
-    double getSalary()     
+    double getSalary()    
     {
         if (benNum == 0)
-            return (rate * hoursWorked);
+            return rate * target;
         if (benNum == 1)
-            return (rate * hoursWorked) + (benefit->calculateBenefit());
+            return (rate * target) + (benefit->calculateBenefit());
     }
 
     void printMore()
     {
-        cout << "Hours Worked -> " << hoursWorked << "\tRate -> " << rate << endl;
+        cout << "Target -> " << target << "\tRate -> " << rate << endl;
     }
 
     void print()
     {
         Employee::print();
-        cout << "Hours Worked -> " << hoursWorked << endl;
+        cout << "Target -> " << target << endl;
         cout << "Rate -> " << rate << endl;
         cout << "Total Cash To Earn -> " << getSalary() << endl;
     }

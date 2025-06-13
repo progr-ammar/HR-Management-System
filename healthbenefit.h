@@ -1,25 +1,48 @@
 #ifndef HEALTHBENEFIT_H
 #define HEALTHBENEFIT_H
+#include <iostream>
+#include <string>
+using namespace std;
 
-#include "benefits.h"
-
-class HealthBenefit : public Benefits {
+class HealthBenefit : public Benefits
+{
 private:
     string coverage;
 public:
-    double calculateBenefit() override {
+    HealthBenefit()
+    {
+        coverage = "Unknown";
+    }
+
+    void read()
+    {
+        Benefits::read();
+        cin.ignore();
+        cout << "Enter Coverage: ";
+        getline(cin, coverage);
+    }
+
+    void setCoverage(string coverage)
+    {
+        this->coverage = coverage;
+    }
+
+    string getCoverage()
+    {
+        return coverage;
+    }
+
+    double calculateBenefit()
+    {
         return 0.2 * amount;
     }
 
-    void read() override {
-        Benefits::read();
-        cout << "Enter Coverage: ";
-        getline(cin >> ws, coverage);
+    void print()
+    {
+        Benefits::print();
+        cout << "\t\tCoverage -> " << coverage << endl;
     }
 
-    void print() override {
-        Benefits::print();
-        cout << "Coverage: " << coverage << endl;
-    }
 };
-#endif
+
+#endif 

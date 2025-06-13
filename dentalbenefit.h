@@ -1,12 +1,27 @@
 #ifndef DENTALBENEFIT_H
 #define DENTALBENEFIT_H
+#include <iostream>
+#include <string>
+using namespace std;
 
-#include "benefits.h"
-
-class DentalBenefit : public Benefits {
+class DentalBenefit : public Benefits
+{
 public:
-    double calculateBenefit() override {
-        return 0.15 * amount;
+
+    void read()
+    {
+        Benefits::read();
+    }
+
+    double calculateBenefit()
+    {
+        return 0.1 * amount;
+    }
+
+    void print()
+    {
+        Benefits::print();
     }
 };
-#endif
+
+#endif 

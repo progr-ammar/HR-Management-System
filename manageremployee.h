@@ -1,25 +1,56 @@
 #ifndef MANAGEREMPLOYEE_H
 #define MANAGEREMPLOYEE_H
+#include <iostream>
+#include <string>
+using namespace std;
 
-#include "salariedemployee.h"
-
-class ManagerEmployee : public SalariedEmployee {
+class ManagerEmployee : public SalariedEmployee
+{
 private:
     double bonus;
 public:
-    ManagerEmployee() : bonus(0) {}
-
-    void setBonus(double b) { bonus = b; }
-    double getBonus() { return bonus; }
-
-    double getSalary() override {
-        double base = salary + bonus;
-        return (benNum == 1) ? base + benefit->calculateBenefit() : base;
+    ManagerEmployee()
+    {
+        bonus = 0;
+        e_type = 'm';
     }
 
-    void print() override {
+    void read()
+    {
+        SalariedEmployee::read();
+        cout << "Enter Bonus: ";
+        cin >> bonus;
+    }
+
+    void setBonus(double bonus)
+    {
+        this->bonus = bonus;
+    }
+
+    double getBonus()
+    {
+        return bonus;
+    }
+
+    double getSalary()       
+    {
+        if (benNum == 0)
+            return (salary + bonus);
+        if (benNum == 1)
+            return (salary + bonus) + (benefit->calculateBenefit());
+    }
+
+    void printMore()
+    {
+        cout << "Bonus -> " << bonus << endl;
+    }
+
+    void print()
+    {
         SalariedEmployee::print();
-        cout << "Bonus: $" << bonus << "\nAdjusted Total: $" << getSalary() << endl;
+        cout << "Bonus -> " << bonus << endl;
+        cout << "Total Cash To Earn -> " << getSalary() << endl;
     }
 };
-#endif
+
+#endif 

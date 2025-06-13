@@ -1,25 +1,56 @@
 #ifndef SALARIEDEMPLOYEE_H
 #define SALARIEDEMPLOYEE_H
+#include <iostream>
+#include <string>
+using namespace std;
 
-#include "employee.h"
-
-class SalariedEmployee : public Employee {
-private:
+class SalariedEmployee : public Employee
+{
+protected:
     double salary;
 public:
-    SalariedEmployee() : salary(0) {}
-
-    void setSalary(double s) { salary = s; }
-    double getSalary() { return salary; }
-
-    double getSalary() override {
-        return (benNum == 1) ? salary + benefit->calculateBenefit() : salary;
+    SalariedEmployee()
+    {
+        salary = 0;
+        e_type = 's';
     }
 
-    void print() override {
+    virtual void read()
+    {
+        Employee::read();
+        cout << "Enter Salary: ";
+        cin >> salary;
+    }
+
+    virtual void setSalary(double salary)
+    {
+        this->salary = salary;
+    }
+
+    virtual double printSalary()
+    {
+        return salary;
+    }
+
+    virtual double getSalary()                      
+    {
+        if (benNum == 0)
+            return salary;
+        if (benNum == 1)
+            return salary + (benefit->calculateBenefit());
+    }
+
+    void printMore()
+    {
+        cout << "Initial Salary -> " << salary << endl;
+    }
+
+    virtual void print()
+    {
         Employee::print();
-        cout << "Type: Salaried\nSalary: $" << salary
-            << "\nTotal: $" << getSalary() << endl;
+        cout << "Salary -> " << salary << endl;
+        cout << "Total Cash To Earn -> " << getSalary() << endl;
     }
 };
-#endif
+
+#endif 

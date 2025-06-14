@@ -1,0 +1,38 @@
+﻿  main.cpp
+C:\Users\dell\Desktop\Project\BSCS23143\hrSystem.h(478,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dell\Desktop\Project\BSCS23143\hrSystem.h(480,30): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dell\Desktop\Project\BSCS23143\hrSystem.h(653,30): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dell\Desktop\Project\BSCS23143\hrSystem.h(654,36): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dell\Desktop\Project\BSCS23143\hrSystem.h(655,34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dell\Desktop\Project\BSCS23143\hrSystem.h(981,26): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dell\Desktop\Project\BSCS23143\hrSystem.h(982,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dell\Desktop\Project\BSCS23143\hrSystem.h(983,29): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dell\Desktop\Project\BSCS23143\hrSystem.h(984,29): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dell\Desktop\Project\BSCS23143\hrSystem.h(985,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dell\Desktop\Project\BSCS23143\hrSystem.h(986,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dell\Desktop\Project\BSCS23143\hrSystem.h(399,1): warning C4715: 'HRSystem::departSearchHelper': not all control paths return a value
+C:\Users\dell\Desktop\Project\BSCS23143\hrSystem.h(528,1): warning C4715: 'HRSystem::benefitSearchHelper': not all control paths return a value
+C:\Users\dell\Desktop\Project\BSCS23143\hrSystem.h(712,1): warning C4715: 'HRSystem::employeeSearchHelper': not all control paths return a value
+  BSCS23143.vcxproj -> C:\Users\dell\Desktop\Project\BSCS23143\x64\Debug\BSCS23143.exe
